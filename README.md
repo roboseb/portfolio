@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---Devlog---
 
-## Available Scripts
+Aug 10th, 2022
 
-In the project directory, you can run:
+    Yippee, finished up my JS final project yesterday, coincidentally around the time that a new module was added to that path. Fuck that for now, I'll come back later at some point probably.
 
-### `npm start`
+    Also yippee, it's portfolio time. Now I get to make sure all of my past projects actually run on GH pages. I think most do overall, but most of the react apps will not, so that will take some doing. Still can't get over that I'm finally done with the JS final project. It's a lot of fun to play around with. It's also hard to compare to other final projects, since they're all so different. Regardless, I'm happy with it and happy to move on from it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    For my portfolio, I wanted to do something a little different. It seems like the portfolio is used as a place to showcase cool animations, which I feel I'm pretty good at. The only difference is that a lot of these portfolio animations that I see people using are beyong what I've come up with, which is actually a good thing. Good artists borrow and great artists steal as they say. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    The primary original idea I have is to have the whole site take place on some sort of beach. The user is experience their life flashing before their eyes, or more accurately my life flashing before their eyes, and my portfolio is a representation of those memories. In the waters along the beach are fish, each being an item from my portfolio. You can fish for them like a fishing minigame, or just look through them normally. I think the normal layout will be the default.
 
-### `npm test`
+    First hiccup of the day was my restaurant page, which I knew would need fixing. Basically it just needed to import images the same way I do with react, so that it could properly be bundled. All good now. But it looks like I'll have to this same fix with all my non-react webpack shit.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Steady progress, but I've literally spent four hours just fixing two projects so that I can acutually run them on GH pages.
 
-### `npm run build`
+    So in a lot of these older projects, I have images placed in the dist folder, which somehow wasn't an issue before, but now building the package basically deletes all of them. Thanks to Github it's not much of an issue, but I'm still not sure why this would have been working before.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---To-Do---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-Mark portfolio items as desktop/mobile friendly
