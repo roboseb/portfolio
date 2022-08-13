@@ -18,6 +18,16 @@ Aug 10th, 2022
 
     So in a lot of these older projects, I have images placed in the dist folder, which somehow wasn't an issue before, but now building the package basically deletes all of them. Thanks to Github it's not much of an issue, but I'm still not sure why this would have been working before.
 
+Aug 12th, 2022
+
+    Went to the local fair yesterday. Lots of fun. Some sort of gas attack as well.
+
+    Was able to wrap up hosting the rest of my sites properly in an hour. Feels good, having my sites actually accessible as web sites in the same form that I work on them. Also hashrouter is crazy crucial, and I'm not sure why it's never mentioned in the routing section of TOP. Or maybe it is, and I just forgot about it.
+
+    Now to get working on the good stuff. I think most of the site will be not that complicated, so I can layout the basics and just get working on the portfolio pool.
+
+    Fuck me, I've got a fish textured with a gif if my JS final project swimming around in a pool, and he points to where he's going. Which of course doesn't sound all that impressive, but it actually required using math from high school that I have long forgotten. 
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
