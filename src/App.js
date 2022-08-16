@@ -28,8 +28,6 @@ function App() {
             root.style.setProperty('--zoom', 1);
         }
 
-        console.log(typeof(root.style.getPropertyValue('--zoom')));
-        
     }
 
     return (
@@ -69,14 +67,15 @@ function App() {
             </div>
 
             <div id='islandbox'>
-                <div id='islandbase'></div>
                 <House />
                 <Garden />
-                
+
                 <Shore />
+                <div id='islandbase'>
+                </div>
             </div>
 
-            
+
 
 
 

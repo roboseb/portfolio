@@ -28,6 +28,21 @@ Aug 12th, 2022
 
     Fuck me, I've got a fish textured with a gif if my JS final project swimming around in a pool, and he points to where he's going. Which of course doesn't sound all that impressive, but it actually required using math from high school that I have long forgotten. 
 
+Aug 13th, 2022
+
+    Slept like shit again. Gonna start today off by importing all 22 website gifs. Then I'm going to start drawing some assets for the island and shrine maiden. My mom lent me her drawing tablet, as it's apparently stressing her out. Sucks for her, but this thing is pretty sick so good for me.
+
+    22 GIFs all done and added to the images folder. Gonna eat some pizza, and then turn them all into fish. Once that's done, I think I can the art. Having that done first will simp
+    lify adding info details to the different sections, I hope.
+
+Aug 15th, 2022
+
+    Did a bunch of random errands with my family yesterday, but back at the grind today. Spent most of the day throwing together some assets, and the shrine maiden looks dope.
+
+    Gonna call it here for today, but I got Miko in and looking hot, and her dress waves in the wind too. Tried to get her hair to do the same, but it's proving a little more difficult. Might try restarting on that tomorrow. 
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
+-fix fish gif performance
+-fix fish pointing at random time intervals
