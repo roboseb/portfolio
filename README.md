@@ -41,8 +41,23 @@ Aug 15th, 2022
 
     Gonna call it here for today, but I got Miko in and looking hot, and her dress waves in the wind too. Tried to get her hair to do the same, but it's proving a little more difficult. Might try restarting on that tomorrow. 
 
+Aug 16th, 2022
+
+    Gotta fix these bangs. Also, expecting to only spend about two more days on this, as it's mostly styling an I think I finished all the art I need. Then moving on to the final section of TOP.
+
+    Added a lot of new stuff in, and with the island mostly filled out, I'm not sure if I like the look anymore. Hopefully a few minor changes will help out with that.
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
 -fix fish gif performance
 -fix fish pointing at random time intervals
+-angle fishboxes with perspective
+-fishing animation
+-sand texture/water texture
+-watercolor map for nav buttons
+-water animation/blur
+-tide coming in and out
+-vertical flag on house with animation
+-tree shaking in wind animation
+-day/night cycle, including shadows

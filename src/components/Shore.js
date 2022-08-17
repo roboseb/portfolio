@@ -29,14 +29,19 @@ import mikoHead1 from "../images/miko_head.png";
 import mikoDress from "../images/miko_dress.png";
 import mikoTorso from "../images/miko_torso.png";
 import mikoArms from "../images/miko_arms.png";
+import mikoArmRight from "../images/miko_arm_right.png";
+import mikoArmLeft from "../images/miko_arm_left.png";
 
 import headBase1 from "../images/head_base_1.png";
 import headBase2 from "../images/head_base_2.png";
 import hairBack from "../images/hair_back.png";
+import hairBack1 from "../images/hair_back_1.png";
+import hairBack2 from "../images/hair_back_2.png";
 import bangs from "../images/hair_bangs.png";
 import brows from "../images/brows.png";
 
 import rod from "../images/rod.png";
+import bucket from "../images/bucket.png";
 
 import uniqid from "uniqid";
 
@@ -53,22 +58,23 @@ const Shore = () => {
         <div id='shore'>
             <div id='mikobox'>
                 <div id='mikoshadow'></div>
-                <div id='mikohairback' style={{ backgroundImage: `url(${hairBack})` }}></div>
+                <div id='bucketshadow'></div>
+                <div id='bucket' style={{ backgroundImage: `url(${bucket})` }}></div>
+
+                <div id='mikohairback1' style={{ backgroundImage: `url(${hairBack1})` }}></div>
+                <div id='mikohairback2' style={{ backgroundImage: `url(${hairBack2})` }}></div>
+
                 <div id='mikohead' style={{ backgroundImage: `url(${headBase1})` }}></div>
                 <div id='mikobangs' style={{ backgroundImage: `url(${bangs})` }}></div>
                 <div id='mikobrows' style={{ backgroundImage: `url(${brows})` }}></div>
 
-
-
-                <div id='mikoarms' style={{ backgroundImage: `url(${mikoArms})` }}></div>
+                <div id='mikoarmleft' style={{ backgroundImage: `url(${mikoArmLeft})` }}></div>
+                <div id='mikoarmright' style={{ backgroundImage: `url(${mikoArmRight})` }}>
+                    <div id='mikorod' style={{ backgroundImage: `url(${rod})` }}></div>
+                </div>
                 <div id='mikotorso' style={{ backgroundImage: `url(${mikoTorso})` }}></div>
-                <div id='mikorod' style={{ backgroundImage: `url(${rod})` }}></div>
 
                 <div id='mikodress' style={{ backgroundImage: `url(${mikoDress})` }}></div>
-
-
-
-
             </div>
 
             <div id='fishbox1'>
