@@ -86,6 +86,7 @@ const Fish = (props) => {
             }}
             onLoad={swim()}
             id={props.fishID}
+            onClick={props.catchFish}
         ></div>
     )
 }

@@ -47,6 +47,12 @@ Aug 16th, 2022
 
     Added a lot of new stuff in, and with the island mostly filled out, I'm not sure if I like the look anymore. Hopefully a few minor changes will help out with that.
 
+Aug 17th, 2022
+
+    Gonna start today off by adding in info panels for the garden and house. I think one is an about page and the other is a contact page. Probably house is the contact page.
+
+    House was the contact page. Got it working nicely too, although I think there's a timing issue with its animations. Garden is also done. Cute little animations as usual. Managed to throw together a little fish rack, which will be used to store caught fish on. By default though, all the fish/websites will be on there and you can fish for them only if you want. Think I'll also add a little fishing minigame. Hopefully I can come up with something both straightforward and clever.
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
@@ -61,3 +67,6 @@ Aug 16th, 2022
 -vertical flag on house with animation
 -tree shaking in wind animation
 -day/night cycle, including shadows
+-button to toggle between modes with more text like a regular portfolio and a more immersive island adventure
+-scroll to cycle through areas
+-add shadows to about cards

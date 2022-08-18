@@ -1,4 +1,5 @@
 import Fish from "./Fish";
+import CaughtFish from "./CaughtFish";
 
 import cDFCD from "../images/CDFCG.gif";
 import recipes from "../images/OdinRecipes.gif";
@@ -42,6 +43,7 @@ import brows from "../images/brows.png";
 
 import rod from "../images/rod.png";
 import bucket from "../images/bucket.png";
+import fishRack from "../images/fishrack.png";
 
 import uniqid from "uniqid";
 
@@ -54,9 +56,42 @@ const Shore = () => {
         jSValidate, hearthstoneAPI, battleship, cVProject,
         memoryCard, shoppingCart, dragonQuest, nubeClicker];
 
+    const catchFish = () => {
+        console.log('catching...')
+    }
+
     return (
         <div id='shore'>
             <div id='mikobox'>
+                <div id='fishrackshadow' style={{ backgroundImage: `url(${fishRack})` }}></div>
+                <div id='fishrack' style={{ backgroundImage: `url(${fishRack})` }}>
+                    <div id='fishrackbox1'>
+                        {sources1.map((item, index) => {
+                            return < CaughtFish
+                                key={uniqid()}
+                                src={item}
+                                fishID={`fish1-${index}`}
+                                timer={index * 2000 + 1000}
+                                box='fishbox1'
+                                catchFish={catchFish}
+                            />
+                        })}
+                    </div>
+                    <div id='fishrackbox2'>
+                        {sources2.map((item, index) => {
+                            return < CaughtFish
+                                key={uniqid()}
+                                src={item}
+                                fishID={`fish1-${index}`}
+                                timer={index * 2000 + 1000}
+                                box='fishbox1'
+                                catchFish={catchFish}
+                            />
+                        })}
+                    </div>
+                </div>
+
+
                 <div id='mikoshadow'></div>
                 <div id='bucketshadow'></div>
                 <div id='bucket' style={{ backgroundImage: `url(${bucket})` }}></div>
@@ -85,6 +120,7 @@ const Shore = () => {
                         fishID={`fish1-${index}`}
                         timer={index * 2000 + 1000}
                         box='fishbox1'
+                        catchFish={catchFish}
                     />
                 })}
 

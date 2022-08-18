@@ -60,17 +60,25 @@ function App() {
             && zoomLevel === '2') {
             houseFront.classList.add('open');
             houseInterior.classList.add('open');
+
+            console.log('opening');
         }
+
+        console.log(zoomLevel)
 
         if (zoom === undefined && targetID !== 'house' &&
             zoomLevel === '2') {
             houseFront.classList.remove('open');
             houseInterior.classList.remove('open');
+
+            console.log('closing');
         }
+
+        
     }
 
     return (
-        <div id="app">
+        <div id="app" oncontextmenu="return false;">
             <div id='linksbox'>
                 <ul>
                     <li><a href="https://roboseb.github.io">Cool Deviantart</a></li>
