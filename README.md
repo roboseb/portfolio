@@ -53,6 +53,10 @@ Aug 17th, 2022
 
     House was the contact page. Got it working nicely too, although I think there's a timing issue with its animations. Garden is also done. Cute little animations as usual. Managed to throw together a little fish rack, which will be used to store caught fish on. By default though, all the fish/websites will be on there and you can fish for them only if you want. Think I'll also add a little fishing minigame. Hopefully I can come up with something both straightforward and clever.
 
+Aug 18th, 2022
+
+    God damn, this better be the last day, which I think it can be. Biggest thing left to do is just finish up the portfolio/shore section. A lot of these other things are optional. I really need to scale back the scope of these projects so that I can make them more polished. Also, sold the last of my stonks today, so unless I start selling pokemon cards the money's pretty much out.
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
@@ -65,8 +69,10 @@ Aug 17th, 2022
 -water animation/blur
 -tide coming in and out
 -vertical flag on house with animation
--tree shaking in wind animation
+DONE-tree shaking in wind animation
 -day/night cycle, including shadows
 -button to toggle between modes with more text like a regular portfolio and a more immersive island adventure
 -scroll to cycle through areas
--add shadows to about cards
+DONE-add shadows to about cards
+-add string suspending caught fish and wind animation
+-make rack back button into a little sign

@@ -74,7 +74,19 @@ function App() {
             console.log('closing');
         }
 
-        
+
+    }
+
+    // Show or hide the entire info box.
+    const toggleInfoBox = () => {
+        const box = document.getElementById('siteinfobox');
+        box.classList.toggle('hidden');
+    }
+
+    // Move the placement of the infobox detail text.
+    const toggleDetails = () => {
+        const box = document.getElementById('infotextbox');
+        box.classList.toggle('hidden');
     }
 
     return (
@@ -125,21 +137,23 @@ function App() {
 
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div id='siteinfobox' onClick={toggleInfoBox}>
+                <div
+                    id='infoimg'
+                    onMouseEnter={toggleDetails}
+                    onMouseLeave={toggleDetails}
+                    style={{ backgroundImage: `url(${require(`./images/site_images/AdminDashboard.gif`)})` }}>
+                </div>
+                <div id='infotextbox'>
+                    <div id='header'>Admin Dashboard</div>
+                    <p id='description'>This project was made by and was a lot of fun and I really tried my hardest. Even though it took me longer, than expected, I think I got through it in the end. Probably the most challenging aspect was the shadows at the bottom of the text panels, as they were quite finicky, and even to this day don't work al ltaht well. Does Kurippi look too much like Miko in this portfolio?</p>
+                    <div id='infobtnbox'>
+                        <button>Github repo</button>
+                        <button>Live Site</button>
+                    </div>
+                </div>
+                <button id='hidebtn'>Hide</button>
+            </div>
         </div>
     );
 }

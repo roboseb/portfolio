@@ -29,7 +29,7 @@ const Fish = (props) => {
 
                 setX(randX);
                 setY(randY);
-            }, 0)
+            }, 0);
         }
 
         setTimeout(() => {
@@ -48,14 +48,9 @@ const Fish = (props) => {
             setX(randX);
             setY(randY);
 
-        }, (Math.random() * 6000) + 2000);
+        }, 1000);
     }
 
-    // useEffect(() => {
-    //     if (props.fishID === 'fish1-0') {
-    //         console.log(Math.round(angle));
-    //     }
-    // }, [angle])
 
     // Calculate the angle for pointing a fish towards its target.
     const calculateAngle = (sideA, sideB, newX, newY) => {
@@ -80,7 +75,6 @@ const Fish = (props) => {
     return (
         <div className="fish"
             style={{
-                backgroundImage: `url(https://roboseb.github.io/battleship/04bdafe9c2fb62b2d62d.png)`,
                 left: x, top: y,
                 transform: `rotate(${angle}deg)`
             }}
