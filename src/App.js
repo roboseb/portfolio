@@ -2,7 +2,10 @@ import Garden from "./components/Garden";
 import House from "./components/House";
 import Shore from "./components/Shore";
 
-import stoneTexture from "./images/stone_texture.png";
+
+import houseIcon from "./images/house_icon.png";
+import gardenIcon from "./images/garden_icon.png";
+import shoreIcon from "./images/shore_icon.png";
 
 
 function App() {
@@ -60,18 +63,12 @@ function App() {
             && zoomLevel === '2') {
             houseFront.classList.add('open');
             houseInterior.classList.add('open');
-
-            console.log('opening');
         }
-
-        console.log(zoomLevel)
 
         if (zoom === undefined && targetID !== 'house' &&
             zoomLevel === '2') {
             houseFront.classList.remove('open');
             houseInterior.classList.remove('open');
-
-            console.log('closing');
         }
 
 
@@ -87,6 +84,32 @@ function App() {
     const toggleDetails = () => {
         const box = document.getElementById('infotextbox');
         box.classList.toggle('hidden');
+    }
+
+    // Set the given nav button to be focused.
+    const setNavFocus = (targetID) => {
+        clearNavFocus();
+
+        const buttons = document.getElementById('nav').querySelectorAll('div');
+        buttons.forEach(button => {
+            if (button.id === 'navtriangle' || button.id === 'navtriangle2') return;
+            button.classList.add('unfocused');
+        });
+
+        const target = document.getElementById(targetID);
+        target.classList.remove('unfocused');
+        target.classList.add('focused');
+
+
+    }
+
+    // Remove the focused/unfocused styling from all nav buttons.
+    const clearNavFocus = () => {
+        const buttons = document.getElementById('nav').querySelectorAll('div');
+        buttons.forEach(button => {
+            if (button.id === 'navtriangle' || button.id === 'navtriangle2') return;
+            button.className = '';
+        });
     }
 
     return (
@@ -119,10 +142,14 @@ function App() {
             </div>
 
             <div id='nav'>
+                <div id='navtriangle2'></div>
+                <div id='navtriangle'></div>
+                
+                <div id='housebtn' onMouseEnter={() => setNavFocus('housebtn')} onMouseLeave={clearNavFocus} onClick={(e) => moveFocus('house')} style={{backgroundImage: `url(${houseIcon})`}}></div>
+                <div id='gardenbtn' onMouseEnter={() => setNavFocus('gardenbtn')} onMouseLeave={clearNavFocus} onClick={(e) => moveFocus('garden')} style={{backgroundImage: `url(${gardenIcon})`}}></div>
+                <div id='shorebtn' onMouseEnter={() => setNavFocus('shorebtn')} onMouseLeave={clearNavFocus} onClick={(e) => moveFocus('shore')} style={{backgroundImage: `url(${shoreIcon})`}}></div>
+
                 <button onClick={toggleZoom}>Toggle Zoom</button>
-                <button onClick={(e) => moveFocus('garden')}>Garden</button>
-                <button onClick={(e) => moveFocus('house')}>House</button>
-                <button onClick={(e) => moveFocus('shore')}>Shore</button>
             </div>
 
             <div id='islandbox' className='shorefocus'>
@@ -131,13 +158,9 @@ function App() {
 
                 <Shore />
                 <div id='islandbase'>
-                    <div id='stonepathbox'>
-                        <div id='stonepath' style={{ backgroundImage: `url(${stoneTexture})` }}></div>
-                    </div>
-
                 </div>
             </div>
-            <div id='siteinfobox' onClick={toggleInfoBox}>
+            <div id='siteinfobox' className='hidden'>
                 <div
                     id='infoimg'
                     onMouseEnter={toggleDetails}
@@ -148,11 +171,15 @@ function App() {
                     <div id='header'>Admin Dashboard</div>
                     <p id='description'>This project was made by and was a lot of fun and I really tried my hardest. Even though it took me longer, than expected, I think I got through it in the end. Probably the most challenging aspect was the shadows at the bottom of the text panels, as they were quite finicky, and even to this day don't work al ltaht well. Does Kurippi look too much like Miko in this portfolio?</p>
                     <div id='infobtnbox'>
-                        <button>Github repo</button>
-                        <button>Live Site</button>
+                        <button id='repobtn' href=''>Github repo
+                            <a href='https://github.com/roboseb' target="_blank" rel="noopener noreferrer"></a>
+                        </button>
+                        <button id='livesitebtn'>Live Site
+                            <a href='https://github.com/roboseb' target="_blank" rel="noopener noreferrer"></a>
+                        </button>
                     </div>
                 </div>
-                <button id='hidebtn'>Hide</button>
+                <button id='hidebtn' onClick={toggleInfoBox}>Back</button>
             </div>
         </div>
     );

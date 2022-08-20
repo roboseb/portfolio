@@ -57,22 +57,35 @@ Aug 18th, 2022
 
     God damn, this better be the last day, which I think it can be. Biggest thing left to do is just finish up the portfolio/shore section. A lot of these other things are optional. I really need to scale back the scope of these projects so that I can make them more polished. Also, sold the last of my stonks today, so unless I start selling pokemon cards the money's pretty much out.
 
+Aug 19th, 2022
+
+    Had a dream that I was out in the street at night. Someone offered me a joint that was way too heavy, and I smoked some, even though I knew that I would regret it as weed makes me nauseous.
+
+    Not sure what I wanna get done today exactly. Most of the functionality is there, and the styling is also largely done. For some reason, the font I'm using has placeholder text randomly sprinkled throughout blocks of text. I might be able to fix it by just rephrasing certain things, since I really like the font.
+
+    It seems almost guaranteed that my portfolio will be updated pretty regularly, so it seems fair to skip the fishing minigame for now. Maybe once I finish TOP I can add it in before I start applying for jobs.
+
+
+
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
--fix fish gif performance
+DONE-fix fish gif performance
 -fix fish pointing at random time intervals
--angle fishboxes with perspective
+DONE-angle fishboxes with perspective
 -fishing animation
 -sand texture/water texture
--watercolor map for nav buttons
+DONE(not watercolor)-watercolor map for nav buttons
 -water animation/blur
--tide coming in and out
+DONE-tide coming in and out
 -vertical flag on house with animation
 DONE-tree shaking in wind animation
 -day/night cycle, including shadows
 -button to toggle between modes with more text like a regular portfolio and a more immersive island adventure
 -scroll to cycle through areas
 DONE-add shadows to about cards
--add string suspending caught fish and wind animation
--make rack back button into a little sign
+DONE-add string suspending caught fish and wind animation
+DONE-make rack back button into a little sign
+-fix fishrack zoom with zoom css variable
+-mobile layout
+-fix various shadows

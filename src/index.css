@@ -50,6 +50,156 @@ body {
     z-index: 2;
     top: 0;
     right: 0;
+
+    height: 20vh;
+    width: 20vh;
+    filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.486));
+    
+    backdrop-filter: blur(3px);
+}
+
+#nav>button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%, 100%);
+    width: 80%;
+    font-family: recoleta, serif;
+    border: none;
+
+    background: rgb(255,0,0);
+    background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 50%, var(--paper) 50%, var(--paper) 100%);
+    background-size: 300% 300%;
+    background-position: 100% 0%;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#nav>button:hover {
+    background-position: 100% 100%;
+    color: white;
+}
+
+
+
+#nav>#navtriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--paper);
+    clip-path: polygon(20% 30%, 50% 80%, 80% 30%);
+}
+
+#nav>#navtriangle2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    clip-path: polygon(12.5% 25%, 50% 90%, 87.5% 25%);
+}
+
+#nav:hover>#navtriangle, #nav:hover>#navtriangle2 {
+    transform-origin: center;
+    transform: scale(0.5) rotate(60deg);
+}
+
+#nav>div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#nav>div::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    content: '';
+
+    transform: translate(-50%, 0%);
+    filter: opacity(0);
+    background-color: var(--paper);
+    padding: 2px;
+}
+
+#nav>#housebtn::after {
+    content: 'Contact';
+}
+
+#nav>#gardenbtn::after {
+    content: 'About';
+    bottom: 22%;
+}
+
+#nav>#shorebtn::after {
+    content: 'Portfolio';
+}
+
+#nav>div.focused::after {
+    filter: opacity(1);
+}
+
+#app>#nav>div.focused:not(#shorebtn) {
+    transform: scale(1.2);
+}
+
+#app>#nav>div.unfocused:not(#shorebtn)  {
+    transform: scale(0.85);
+    filter: opacity(0.5);
+}
+
+#app>#nav>#shorebtn.focused {
+    transform: translate(-50%, 50%) scale(1.2);
+}
+
+#app>#nav>#shorebtn.unfocused {
+    transform: translate(-50%, 50%) scale(0.85);
+    filter: opacity(0.5);
+}
+
+#nav>#housebtn {
+    position: absolute;
+    bottom: 50%;
+    left: 8%;
+
+
+    height: 40%;
+    width: 40%;
+    transform-origin: top left;
+}
+
+#nav>#gardenbtn {
+    position: absolute;
+    bottom: 40%;
+    right: 3%;
+
+
+    height: 50%;
+    width: 50%;
+    transform-origin: top right;
+}
+
+#nav>#shorebtn {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+
+
+    height: 40%;
+    width: 40%;
+    transform: translate(-50%, 50%);
+    transform-origin: bottom center;
 }
 
 #islandbox {
@@ -88,25 +238,56 @@ body {
     z-index: 0;
 
     width: 150%;
-    height: 85%;
-    background-color: rgb(190, 176, 98);
+    height: 90%;
+    background: rgb(190,176,98);
+    background: linear-gradient(210deg, rgba(190,176,98,1) 0%, rgba(190,176,98,1) 75%, rgba(200, 192, 123, 0) 100%);
     filter: opacity(1);
     border-radius: 0 0 50% 30%;
     transform: skewX(45deg);
+
+    animation: waves 10s infinite;
 }
 
-#islandbase>#stonepathbox {
-    position: absolute;
-    top: 60%;
-    left: 30%;
+@keyframes waves {
+    0% {border-radius: 0 0 50% 25%;}
+    50% {border-radius: 0 0 50% 35%; height: 85%;}
+    100% {border-radius: 0 0 50% 25%;}
+}
 
-    height: 15%;
+
+
+#garden {
+    position: relative;
+    z-index: 1;
+}
+
+#house {
+    position: relative;
+    z-index: 2;
+}
+
+#shore {
+    grid-column: span 2;
+    position: relative;
+    z-index: 1;
+
+    perspective: 390px;
+    perspective-origin: 50% 50%;
+}
+
+#shore>#stonepathbox {
+    position: absolute;
+    top: 0%;
+    left: 55%;
+
+    height: 25%;
     width: 70%;
     border-radius: 20% 15% 35% 10%;
-    overflow: hidden
+    overflow: hidden;
+    transform: skewX(45deg);
 }
 
-#islandbase>#stonepathbox::after {
+#shore>#stonepathbox::after {
     content  : "";
     position : absolute;
     z-index  : 1;
@@ -126,7 +307,7 @@ body {
     100% {transform: translate(-50%, 0%)}
 }
 
-#islandbase>#stonepathbox>#stonepath {
+#shore>#stonepathbox>#stonepath {
     position: absolute;
     top: 0;
     left: -15%;
@@ -139,44 +320,30 @@ body {
     background-size: calc(50px * var(--zoom));
 }
 
-#garden {
-    position: relative;
-    z-index: 1;
-}
-
-#house {
-    position: relative;
-    z-index: 2;
-}
-
-#shore {
-    grid-column: span 2;
-    position: relative;
-    z-index: 1;
-}
-
 #shore>#fishbox1 {
     position: absolute;
-    bottom: 0;
-    right: 50%;
+    bottom: -20%;
+    left: 0;
     
-    width: 25%;
-    height: 43%;
+    width: 40%;
+    height: 80%;
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(60deg) rotateY(15deg) rotateZ(-25deg);
 
 
-    background-color: rgba(126, 252, 0, 0.466);
+    background-color: rgba(126, 252, 0, 0);
 
 }
 
 #shore>#fishbox2 {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    right: -10%;
     
-    width: 25%;
-    height: 32%;
+    width: 65%;
+    height: 26%;
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(60deg) rotateY(15deg) rotateZ(-12deg);
 
-    background-color: rgba(255, 160, 122, 0.445);
+    background-color: rgba(255, 160, 122, 0);
 }
 
 .fish {
@@ -234,9 +401,6 @@ body {
     pointer-events: all;
     animation: rackshake 10s infinite;
     transition: all 0.3s, animation 0s;
-
-
-
 }
 
 #mikobox>#fishrack.expanded {
@@ -250,7 +414,6 @@ body {
     max-height: 100vh;
     max-width: 1700px;
     transform: skewX(-0deg) rotate(-0deg) translate(50%, 50%);
-    
 }
 
 #mikobox>#fishrack.noani {
@@ -273,6 +436,62 @@ body {
     100% {transform: skewX(-4deg) rotate(-2deg) scaleY(1)}
 }
 
+#fishrack>button {
+    z-index: -1;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 4%;
+    left: 15%;
+
+    font-size: calc(6px * var(--zoom));
+    font-family: recoleta, serif;
+    font-weight: bolder;
+    
+    height: 10%;
+    width: 20%;
+    background-color: rgb(124, 116, 52);
+    padding: initial;
+    padding-top: calc(3px * var(--zoom));
+
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#fishrack>button:hover {
+    filter: brightness(1.5);
+}
+
+#fishrack>button::before {
+    position: absolute;
+    z-index: -1;
+    top: -100%;
+    left: -23%;
+    content: '';
+
+    height: 100%;
+    width: 100%;
+    transform: skewX(60deg);
+    background-color: rgb(139, 131, 68);
+} 
+
+#fishrack>button::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    content: '';
+
+    height: 100%;
+    width: 46%;
+    transform: skewY(29deg) translate(-99%, 45%);
+    background-color: rgb(105, 97, 38);
+} 
+
+#fishrack.expanded>button {
+    font-size: 20px;
+}
+
 .fishrackbox {
     height: 90%;
     width: 100%;
@@ -281,6 +500,7 @@ body {
 
     display: flex;
     flex-wrap: wrap;
+    pointer-events: none;
 }
 
 .fishrackbox>.caughtfishbox {
@@ -327,6 +547,7 @@ body {
 
     transition: all 0.3s;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .fishrackbox>.caughtfishbox>.caughtfish:hover {
@@ -971,7 +1192,7 @@ body {
 }
 
 #treebox>#about2 {
-    left: -25%;
+    left: -10%;
     bottom: 50%;
 }
 
@@ -998,13 +1219,37 @@ body {
 }
 
 #siteinfobox.hidden {
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 60%);
 }
 
 #siteinfobox>button {
     position: absolute;
     top: 0;
     right: 0;
+
+    height: 10%;
+    width: 20%;
+    flex-grow: 1;
+    transition: all 0.3s;
+    overflow: hidden;
+    font-family: recoleta, serif;
+    border: none;
+    color: rgba(255, 0, 0, 0.555);
+    font-size: 2.5rem;
+
+    background: rgb(255,0,0);
+    background: linear-gradient(225deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 50%, rgba(200,192,123,0) 50%, rgba(200,192,123,0) 100%);
+    background-size: 200% 200%;
+    background-position: 0% 100%;
+
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+#siteinfobox>button:hover {
+    background-position: 100% 0%;
+    color: white;
 }
 
 #siteinfobox>#infoimg {
@@ -1044,6 +1289,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    pointer-events: none;
 }
 
 #siteinfobox>#infotextbox.hidden {
@@ -1069,6 +1315,7 @@ body {
     left: 0;
     transform: translate(0%, -100%);
     padding-left: 8px;
+    color: red;
 }
 
 #siteinfobox>#infotextbox>p {
@@ -1081,13 +1328,35 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     gap: 20px;
-    background-color: red;
 }
 
 #siteinfobox>#infotextbox button {
+    position: relative;
     height: 60px;
     flex-grow: 1;
     transition: all 0.3s;
     overflow: hidden;
-    
+    font-family: recoleta, serif;
+    border: none;
+
+    background: rgb(255,0,0);
+    background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 50%, rgba(200,192,123,1) 50%, rgba(200,192,123,1) 100%);
+    background-size: 300% 300%;
+    background-position: 100% 0%;
+
+    pointer-events: all;
+}
+
+#siteinfobox>#infotextbox button:hover {
+    background-position: 100% 100%;
+    color: white;
+}
+
+#siteinfobox>#infotextbox button>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
 }

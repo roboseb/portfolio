@@ -17,6 +17,19 @@ const Fish = (props) => {
 
         const desc = document.getElementById('description');
         desc.innerText = props.info.desc;
+
+        const liveSite = document.getElementById('livesitebtn').querySelector('a');
+        liveSite.href = `https://roboseb.github.io/${props.info.url}`;
+
+        // Route to the correct repo if linking to CDFCG.
+
+        if (props.info.url === '') {
+            const repo = document.getElementById('repobtn').querySelector('a');
+            repo.href = `https://github.com/roboseb/Cool-Deviantart`;
+        } else {
+            const repo = document.getElementById('repobtn').querySelector('a');
+            repo.href = `https://github.com/roboseb/${props.info.url}`;
+        }
     }
 
     return (
