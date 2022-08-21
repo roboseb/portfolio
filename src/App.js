@@ -2,10 +2,12 @@ import Garden from "./components/Garden";
 import House from "./components/House";
 import Shore from "./components/Shore";
 
-
 import houseIcon from "./images/house_icon.png";
 import gardenIcon from "./images/garden_icon.png";
 import shoreIcon from "./images/shore_icon.png";
+
+import waterTexture from "./images/water_texture.png";
+import beachTexture from "./images/beach_texture.png";
 
 
 function App() {
@@ -13,6 +15,12 @@ function App() {
 
     // Move the site's focus to the selected id's element.
     const moveFocus = (targetID) => {
+
+        // Zoom in to the chosen location if zoomed out.
+        const root = document.documentElement;
+        if (parseInt(root.style.getPropertyValue('--zoom')) === 1) {
+            toggleZoom();
+        }
 
         // Update the house's front panel.
         toggleHouseOpen(targetID);
@@ -113,7 +121,7 @@ function App() {
     }
 
     return (
-        <div id="app" oncontextmenu="return false;">
+        <div id="app" oncontextmenu="return false;" style={{backgroundImage: `url(${waterTexture})`}}>
             <div id='linksbox'>
                 <ul>
                     <li><a href="https://roboseb.github.io">Cool Deviantart</a></li>
@@ -158,6 +166,7 @@ function App() {
 
                 <Shore />
                 <div id='islandbase'>
+                    <div id='beachbox' style={{backgroundImage: `url(${beachTexture})`}}></div>
                 </div>
             </div>
             <div id='siteinfobox' className='hidden'>
@@ -171,7 +180,7 @@ function App() {
                     <div id='header'>Admin Dashboard</div>
                     <p id='description'>This project was made by and was a lot of fun and I really tried my hardest. Even though it took me longer, than expected, I think I got through it in the end. Probably the most challenging aspect was the shadows at the bottom of the text panels, as they were quite finicky, and even to this day don't work al ltaht well. Does Kurippi look too much like Miko in this portfolio?</p>
                     <div id='infobtnbox'>
-                        <button id='repobtn' href=''>Github repo
+                        <button id='repobtn' href=''>Github Repo
                             <a href='https://github.com/roboseb' target="_blank" rel="noopener noreferrer"></a>
                         </button>
                         <button id='livesitebtn'>Live Site
@@ -181,6 +190,7 @@ function App() {
                 </div>
                 <button id='hidebtn' onClick={toggleInfoBox}>Back</button>
             </div>
+            
         </div>
     );
 }

@@ -6,6 +6,8 @@ import linkedin from "../images/linkedin_rug.png";
 import emailArt from "../images/email_art.png";
 import github from "../images/github_art.png";
 
+import flag from "../images/flag.png";
+
 const House = () => {
 
     // Copy sebastienapril@rocketmail.com to the clipboard.
@@ -26,6 +28,7 @@ const House = () => {
 
                 <div id='houseroof' style={{ backgroundImage: `url(${houseRoof})` }}></div>
                 <div id='housefront' style={{ backgroundImage: `url(${houseFront})` }}></div>
+                <div id='flag' style={{ backgroundImage: `url(${flag})` }}></div>
             </div>
         </div>
     )

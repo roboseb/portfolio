@@ -54,6 +54,7 @@ const Shore = () => {
     const [fishSet2, setFishSet2] = useState(['RestaurantPage', 'ToDoList', 'MobileFirst',]);
 
     const [caughtSet, setCaughtSet] = useState([]);
+    const [head, setHead] = useState(headBase2);
 
     // Toggle the expanded fish rack display.
     const toggleExpandedRack = () => {
@@ -84,6 +85,15 @@ const Shore = () => {
         console.log('catching...')
     }
 
+    // Alternate between Miko's two heads.
+    const toggleHead = () => {
+        if (head === headBase1) {
+            setHead(headBase2);
+        } else {
+            setHead(headBase1);
+        }
+    }
+
     return (
         <div id='shore'>
             <div id='stonepathbox'>
@@ -96,7 +106,7 @@ const Shore = () => {
                             return < CaughtFish
                                 key={uniqid()}
                                 info={item}
-                                fishID={`fish1-${index}`}
+                                fishID={`caughtfish1-${index}`}
                                 timer={index * 2000 + 1000}
                                 box='fishbox1'
                                 catchFish={catchFish}
@@ -111,7 +121,7 @@ const Shore = () => {
                             return < CaughtFish
                                 key={uniqid()}
                                 info={item}
-                                fishID={`fish1-${index}`}
+                                fishID={`caughtfish2-${index}`}
                                 timer={index * 2000 + 1000}
                                 box='fishbox1'
                                 catchFish={catchFish}
@@ -129,7 +139,7 @@ const Shore = () => {
                 <div id='mikohairback1' style={{ backgroundImage: `url(${hairBack1})` }}></div>
                 <div id='mikohairback2' style={{ backgroundImage: `url(${hairBack2})` }}></div>
 
-                <div id='mikohead' style={{ backgroundImage: `url(${headBase1})` }}></div>
+                <div id='mikohead' onClick={toggleHead} style={{ backgroundImage: `url(${head})` }}></div>
                 <div id='mikobangs' style={{ backgroundImage: `url(${bangs})` }}></div>
                 <div id='mikobrows' style={{ backgroundImage: `url(${brows})` }}></div>
 
@@ -148,7 +158,7 @@ const Shore = () => {
                         key={uniqid()}
                         src={item}
                         fishID={`fish1-${index}`}
-                        timer={index * 2000 + 1000}
+                        timer={index * 2000 + 3000}
                         box='fishbox1'
                         catchFish={catchFish}
                     />
@@ -162,6 +172,8 @@ const Shore = () => {
                     box='fishbox1'
                 /> */}
 
+                <div id='marker'></div>
+
             </div>
             <div id='fishbox2'>
                 {fishSet1.map((item, index) => {
@@ -169,12 +181,13 @@ const Shore = () => {
                         key={uniqid()}
                         src={item}
                         fishID={`fish2-${index}`}
-                        timer={index * 1000 + 1000}
+                        timer={index * 1000 + 3000}
                         box='fishbox2'
                     />
                 })}
             </div>
             <div id='shadebox'></div>
+            <div id='nametag'>Seb April</div>
         </div>
     )
 }

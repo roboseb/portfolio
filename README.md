@@ -1,4 +1,30 @@
-# portfolio
+# Seb's Portfolio
+
+---Features---
+
+    -A big beautiful and responsive island to explore
+
+    -A shore complete with procedurally swimming fish and Miko, the shrine maiden
+
+    -A bonsai garden with info about me planted in the sand
+
+    -A tea house with decorations that link to my LinkedIn and github, and copy my email to clipboard
+
+    -All of my previous projects shown as fish that Miko has caught
+
+    -Click on a fish to expand into an info panel with a title, short description and animated gif showing the site in action
+
+    -Info panels also link to github repos and live sites
+
+    -All art custom made by me for this project in particular
+
+    -Massive drop in art quality after the first assets I made, can you guess what they are?
+
+    -Most objects realistically swaying in the wind, many with shadows that sway along with them
+
+    -Simple UI to move around the island and see different sections.
+
+    -Option to toggle zoom level, so that you can see the entire island all at once!
 
 ---Devlog---
 
@@ -65,20 +91,26 @@ Aug 19th, 2022
 
     It seems almost guaranteed that my portfolio will be updated pretty regularly, so it seems fair to skip the fishing minigame for now. Maybe once I finish TOP I can add it in before I start applying for jobs.
 
+Aug 21st, 2022 
+
+    Gonna try to do a half day on this project, and then move on to next TOP section.
+
+    Christ, that's all done for now. I can't believe I wanted to add a fishing minigame and a day/night cycle. I am deranged.
+
 
 
 ---To-Do---
 
 -Mark portfolio items as desktop/mobile friendly
 DONE-fix fish gif performance
--fix fish pointing at random time intervals
+DONE-fix fish pointing at random time intervals
 DONE-angle fishboxes with perspective
 -fishing animation
--sand texture/water texture
+DONE-sand texture/water texture
 DONE(not watercolor)-watercolor map for nav buttons
--water animation/blur
+DONE-water animation/blur
 DONE-tide coming in and out
--vertical flag on house with animation
+DONE-vertical flag on house with animation
 DONE-tree shaking in wind animation
 -day/night cycle, including shadows
 -button to toggle between modes with more text like a regular portfolio and a more immersive island adventure
@@ -86,6 +118,8 @@ DONE-tree shaking in wind animation
 DONE-add shadows to about cards
 DONE-add string suspending caught fish and wind animation
 DONE-make rack back button into a little sign
--fix fishrack zoom with zoom css variable
+DONE-fix fishrack zoom with zoom css variable
 -mobile layout
 -fix various shadows
+DONE-add my name somewhere big and obvious
+-Add a message for copying email to clipboard
