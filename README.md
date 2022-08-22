@@ -123,3 +123,6 @@ DONE-fix fishrack zoom with zoom css variable
 -fix various shadows
 DONE-add my name somewhere big and obvious
 -Add a message for copying email to clipboard
+-make garden tower do something
+-fix zooming into house glitch
+-Add loading message/screen

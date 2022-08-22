@@ -51,10 +51,6 @@ const Shore = () => {
 
 
     const [fishSet1, setFishSet1] = useState(['CDFCG', 'OdinRecipes', 'OdinLandingPage']);
-    const [fishSet2, setFishSet2] = useState(['RestaurantPage', 'ToDoList', 'MobileFirst',]);
-
-    const [caughtSet, setCaughtSet] = useState([]);
-    const [head, setHead] = useState(headBase2);
 
     // Toggle the expanded fish rack display.
     const toggleExpandedRack = () => {
@@ -87,10 +83,12 @@ const Shore = () => {
 
     // Alternate between Miko's two heads.
     const toggleHead = () => {
-        if (head === headBase1) {
-            setHead(headBase2);
+        const mikoHead = document.getElementById('mikohead');
+
+        if (mikoHead.style.backgroundImage.includes('head_base_1')) {
+            mikoHead.style.backgroundImage = `url(${headBase2})`;
         } else {
-            setHead(headBase1);
+            mikoHead.style.backgroundImage = `url(${headBase1})`;
         }
     }
 
@@ -139,7 +137,7 @@ const Shore = () => {
                 <div id='mikohairback1' style={{ backgroundImage: `url(${hairBack1})` }}></div>
                 <div id='mikohairback2' style={{ backgroundImage: `url(${hairBack2})` }}></div>
 
-                <div id='mikohead' onClick={toggleHead} style={{ backgroundImage: `url(${head})` }}></div>
+                <div id='mikohead' onClick={toggleHead} style={{ backgroundImage: `url(${headBase2})` }}></div>
                 <div id='mikobangs' style={{ backgroundImage: `url(${bangs})` }}></div>
                 <div id='mikobrows' style={{ backgroundImage: `url(${brows})` }}></div>
 
@@ -163,16 +161,6 @@ const Shore = () => {
                         catchFish={catchFish}
                     />
                 })}
-
-                {/* < Fish
-                    key={uniqid()}
-                    src={"https://roboseb.github.io/battleship/04bdafe9c2fb62b2d62d.png"}
-                    fishID={`fish1-0`}
-                    timer={0 * 2000 + 1000}
-                    box='fishbox1'
-                /> */}
-
-                <div id='marker'></div>
 
             </div>
             <div id='fishbox2'>

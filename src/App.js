@@ -9,7 +9,6 @@ import shoreIcon from "./images/shore_icon.png";
 import waterTexture from "./images/water_texture.png";
 import beachTexture from "./images/beach_texture.png";
 
-
 function App() {
 
 
@@ -49,13 +48,18 @@ function App() {
 
     //Animate the front of the house moving away.
     const toggleHouseOpen = (targetID, zoom) => {
+
+        
+
         const root = document.documentElement;
         const islandBox = document.getElementById('islandbox');
 
         const houseFront = document.getElementById('housefront');
         const houseInterior = document.getElementById('houseinterior');
 
-        const zoomLevel = root.style.getPropertyValue('--zoom');
+        const rootStyle = window.getComputedStyle(root);
+
+        const zoomLevel = parseInt(rootStyle.getPropertyValue('--zoom'));
 
         // Handle zooming in and out from the house.
         if (zoom === 1 && islandBox.classList.contains('housefocus')) {
@@ -68,17 +72,16 @@ function App() {
 
         // Handle changing focus to the house.
         if (zoom === undefined && !islandBox.classList.contains(`${targetID}focus`)
-            && zoomLevel === '2') {
+            && zoomLevel === 2) {
             houseFront.classList.add('open');
             houseInterior.classList.add('open');
-        }
-
-        if (zoom === undefined && targetID !== 'house' &&
-            zoomLevel === '2') {
+        } else if (zoom === undefined && targetID !== 'house' &&
+            zoomLevel === 2) {
             houseFront.classList.remove('open');
-            houseInterior.classList.remove('open');
+            houseInterior.classList.remove('opeconsole.log(zoom, islandBox.className)n');
         }
 
+        
 
     }
 
@@ -121,7 +124,7 @@ function App() {
     }
 
     return (
-        <div id="app" oncontextmenu="return false;" style={{backgroundImage: `url(${waterTexture})`}}>
+        <div id="app" style={{backgroundImage: `url(${waterTexture})`}}>
             <div id='linksbox'>
                 <ul>
                     <li><a href="https://roboseb.github.io">Cool Deviantart</a></li>
